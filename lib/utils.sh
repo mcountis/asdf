@@ -622,9 +622,9 @@ with_shim_executable() {
     return 1
   fi
 
-  selected_version=$(select_from_tool_versions)
+  selected_version=$(select_from_preset_version)
   if [ -z "$selected_version" ]; then
-    selected_version=$(select_from_preset_version)
+    selected_version=$(select_from_tool_versions)
   fi
 
   if [ -n "$selected_version" ]; then
